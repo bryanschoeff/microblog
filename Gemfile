@@ -7,6 +7,8 @@ gem 'bcrypt-ruby'
 gem 'faker'
 gem 'will_paginate'
 gem 'bootstrap-will_paginate'
+gem 'thin'
+gem 'slim'
 
 group :development, :test do
   gem 'sqlite3'
