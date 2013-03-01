@@ -9,9 +9,9 @@ describe "Static Pages" do
       page.should have_selector('h1', text: 'Microblog Application')
     end
 
-    it "should have the correct title" do
+    it "should not have a custom title title" do
       visit '/static_pages/home'
-      page.source.should have_selector('title', text: 'Microblog Application :: Home')
+      page.source.should_not have_selector('title', text: ':: Home')
     end
 
   end
