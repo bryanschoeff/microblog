@@ -6,4 +6,26 @@ html
     = javascript_include_tag "application"
     = csrf_meta_tags
   body
-    = yield
+    header class="navbar navbar-fixed-top"
+      .navbar-inner
+        .container
+          = link_to "microblog", root_path, id: "logo"
+          nav
+            ul class="nav pull-right"
+              li= link_to "home", root_path
+              li= link_to "help", help_path
+              li= link_to "sign up", "#"
+    .container
+      = yield
+      footer class="small"
+        small
+          a href="http://bryanschoeff.com"
+            | bryan schoeff
+          |  by chef
+        nav
+          ul
+            li= link_to "about", about_path
+            li= link_to "contact", contact_path
+            li
+              a href="http://cnn.com"
+                | news
