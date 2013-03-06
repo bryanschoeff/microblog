@@ -14,6 +14,7 @@ group :development, :test do
   gem 'sqlite3'
   gem 'rspec-rails'
   gem 'guard-rspec'
+  gem 'pry'
 end
 
 group :assets do
