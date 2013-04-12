@@ -1,0 +1,14 @@
+= provide(:title, 'users')
+
+h1 users
+
+= will_paginate
+ul.users
+  - @users.each do |user|
+    li
+      = gravatar_for user, size: 52
+      = link_to user.name, user
+      - if current_user.admin? && !current_user?(user)
+        span  | 
+        = link_to 'delete', user, method: :delete, confirm: 'sure?'
+= will_paginate
